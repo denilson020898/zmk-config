@@ -52,13 +52,13 @@
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-// |BLOAD| INS  | PSCR | GUI   |       |      |                |      | PGDN | PGUP  |      |       |       |
+// |BLOAD| INS  | PSCR | GUI   |       |      |                | TAB  | PGDN | PGUP  |      |       |       |
 // |RESET| ALT  | CTRL | SHIFT |       | CAPS |                |  <-  |   v  |   ^   |  ->  |  DEL  | BKSPC |
 // |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
 //              |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans    &trans    &trans    &trans    &trans  &trans
-&bootloader     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans              &trans    &kp PG_DN &kp PG_UP &trans    &kp N0  &trans
+&bootloader     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans              &kp TAB   &kp PG_DN &kp PG_UP &trans    &kp N0  &trans
 &reset     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                 &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp DEL &kp BSPC
 &trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &trans  &trans    &trans    &trans    &trans    &trans  &trans
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans    &trans
